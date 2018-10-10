@@ -14,4 +14,3 @@ def compare(list):
     return newList
 
 x = compare(l)
-print(x)
