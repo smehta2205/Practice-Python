@@ -19,8 +19,8 @@ def rFactorial(n):
 
 def main():
     n = int(input("Enter your number:"))
-    print(factorial(n))
-    print(rFactorial(n))
+    print("Non-recursive factorial: ", factorial(n))
+    print("Recursive factorial: ", rFactorial(n))
 
 
 if __name__ == "__main__":
