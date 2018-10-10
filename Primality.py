@@ -1,14 +1,14 @@
-def simplePrimaryTest(number):
-    if number == 2:
+def simplePrimaryTest(value):
+    if value == 2:
        return true
-    if number % 2 == 0:
+    if value % 2 == 0:
         return False
     
     i = 3
-    sqrtOfNumber = math.sqrt(number)
+    sqrtOfValue = math.sqrt(value)
     
-    while i <= sqrtOfNumber:
-        if number % i == 0:
+    while i <= sqrtOfValue:
+        if value % i == 0:
             return False
         i = i+2
         
