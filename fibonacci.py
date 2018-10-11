@@ -6,5 +6,4 @@ def fibonacci(count):
 
 count = input("How many numbers generate in fibonacci")
 print(fibonacci(count))
-print(one_line_fibonacci(count))
 
