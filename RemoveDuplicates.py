@@ -48,6 +48,7 @@ def remove_duplicates(original_item):
 
             # We finaly return our list without duplicate :)
             return result
+    return original_item
 
 
 if __name__ == '__main__':
