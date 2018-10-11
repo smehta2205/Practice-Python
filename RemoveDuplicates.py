@@ -8,43 +8,46 @@ def remove_duplicates(original_item):
     Returns the new list.
     """
 
-    try:
-        # We use a try because this is the version for non multi dimentional
-        # list like one given in example 1
+    if isinstance(original_item, list):
+        # The original  item is a list.
+        
+        try:
+            # We use a try because this is the version for non multi dimentional
+            # list like one given in example 1
 
-        # We use a set because it's more fun :)
-        # Actually a set can't have a duplicate so we basically try to add
-        # an element into seen. It it's working, then the element is not already
-        # present.
-        #
-        # Note: seen.add() has no effect if the element in already into the set :)
-        #
-        # Note: Ofently you will see something like
-        #   return list(set(element))
-        # It's correct but the difference with the following is that we keep the order
-        # when the example in this note does not keep the order.
-        # But both (the note example and the following code) only work with
-        # unidimentional list :)
-        seen = set()
+            # We use a set because it's more fun :)
+            # Actually a set can't have a duplicate so we basically try to add
+            # an element into seen. It it's working, then the element is not already
+            # present.
+            #
+            # Note: seen.add() has no effect if the element in already into the set :)
+            #
+            # Note: Ofently you will see something like
+            #   return list(set(element))
+            # It's correct but the difference with the following is that we keep the order
+            # when the example in this note does not keep the order.
+            # But both (the note example and the following code) only work with
+            # unidimentional list :)
+            seen = set()
 
-        return [element for element in original_item if not (element in seen or seen.add(element))]
-    except TypeError:
-        # This is the part for multi-dimentional list :)
+            return [element for element in original_item if not (element in seen or seen.add(element))]
+        except TypeError:
+            # This is the part for multi-dimentional list :)
 
-        # We initiate a result which will save our element.
-        result = []
+            # We initiate a result which will save our element.
+            result = []
 
-        for element in original_item:
-            # We loop through our list of element.
+            for element in original_item:
+                # We loop through our list of element.
 
-            if element not in result:
-                # The element is not already into our result.
+                if element not in result:
+                    # The element is not already into our result.
 
-                # So we append it to our result :)
-                result.append(element)
+                    # So we append it to our result :)
+                    result.append(element)
 
-        # We finaly return our list without duplicate :)
-        return result
+            # We finaly return our list without duplicate :)
+            return result
 
 
 if __name__ == '__main__':
