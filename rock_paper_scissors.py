@@ -88,14 +88,6 @@ def main():
         else:
             die_again = False
 
-def choice_to_text(choice):
-    if choice == 1:
-        return "Rock"
-    elif choice == 2:
-        return "Paper"
-    else:
-        return "Scissors"
-
 def select_weapon(player_name):
     print(" Choose your weapon %s:" % player_name)
     print("  Rock     - 1")
