@@ -1,0 +1,6 @@
+teststring = input("Enter Any String : ")
+result = teststring.split()
+result.reverse()
+result = " ".join(result)
+
+print(result)
